@@ -5,8 +5,6 @@ void saveToEEPROM() {
 
     data["1"] = defBrightnessPercent;
     data["2"] = lightTimeSeconds;
-    // data["3"] = fadeInMs;
-    // data["4"] = fadeOutMs;
     data["3"] = ap_ssid;
     data["4"] = ap_password;
     data["5"] = ap_ssid_2;
@@ -54,8 +52,6 @@ void loadDataFromEEPROM() {
 
         defBrightnessPercent = root["1"];
         lightTimeSeconds = root["2"];
-        // fadeInMs = root["3"];
-        // fadeOutMs = root["4"];
 
         ap_ssid = root["3"].as<String>();
         ap_password = root["4"].as<String>();
